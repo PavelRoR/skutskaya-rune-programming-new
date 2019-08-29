@@ -2,6 +2,7 @@ AV = 'AvenirNextCyr', sans-serif;
 AVB = 'AvenirNextCyrBold', sans-serif;
 AVM = 'AvenirNextCyrMadium', sans-serif;
 AVL = 'AvenirNextCyrLight', sans-serif;
+AVI = 'AvenirNextCyrItalic', sans-serif;
 
 @font-face {
 	font-family: 'AvenirNextCyr';
@@ -52,6 +53,19 @@ AVL = 'AvenirNextCyrLight', sans-serif;
 	font-weight: 600;
 	font-style: normal;
 }
+@font-face {
+	font-family: 'AvenirNextCyrItalic';
+	src: url('../fonts/AvenirNextCyrItalic.eot');
+	src: url('../fonts/AvenirNextCyrItalic.eot') format('embedded-opentype'),
+		 url('../fonts/AvenirNextCyrItalic.woff2') format('woff2'),
+		 url('../fonts/AvenirNextCyrItalic.woff') format('woff'),
+		 url('../fonts/AvenirNextCyrItalic.ttf') format('truetype'),
+		 url('../fonts/AvenirNextCyrItalic.svg#AvenirNextCyrItalic') format('svg');
+	font-display: fallback;
+	font-weight: normal;
+	font-style: italic;
+}
+
 
 @import '../css/_css/bootstrap.min.css'
 @import '../css/_css/jquery.fancybox.min.css'
@@ -60,7 +74,7 @@ body
 	font-family: AV
 	font-size: 18px
 	line-height: 1.3
-	color: #fff
+	color: #000
 *
 	margin 0
 	padding 0
@@ -134,6 +148,13 @@ footer
 		text-decoration: none 
 		color #fff
 		background-color: #140a5c + 10%
+.general-title
+	text-align: center
+	font-size: 40px;
+	font-family: AVB
+	color: rgb(0, 0, 0);
+	line-height: 1.25;
+	margin-bottom: 45px
 
 @import 'main/0.header'
 @import 'main/1.main'
