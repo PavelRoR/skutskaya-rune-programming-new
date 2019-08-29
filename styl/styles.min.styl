@@ -1,0 +1,128 @@
+AV = 'AvenirNextCyr', sans-serif;
+AVB = 'AvenirNextCyrBold', sans-serif;
+AVM = 'AvenirNextCyrMadium', sans-serif;
+AVL = 'AvenirNextCyrLight', sans-serif;
+
+@font-face {
+	font-family: 'AvenirNextCyr';
+	src: url('../fonts/AvenirNextCyr.eot');
+	src: url('../fonts/AvenirNextCyr.eot') format('embedded-opentype'),
+		 url('../fonts/AvenirNextCyr.woff2') format('woff2'),
+		 url('../fonts/AvenirNextCyr.woff') format('woff'),
+		 url('../fonts/AvenirNextCyr.otf') format('opentype'),
+		 url('../fonts/AvenirNextCyr.ttf') format('truetype'),
+		 url('../fonts/AvenirNextCyr.svg#AvenirNextCyr') format('svg');
+	font-display: fallback;
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'AvenirNextCyrBold';
+	src: url('../fonts/AvenirNextCyrBold.eot');
+	src: url('../fonts/AvenirNextCyrBold.eot') format('embedded-opentype'),
+		 url('../fonts/AvenirNextCyrBold.woff2') format('woff2'),
+		 url('../fonts/AvenirNextCyrBold.woff') format('woff'),
+		 url('../fonts/AvenirNextCyrBold.ttf') format('truetype'),
+		 url('../fonts/AvenirNextCyrBold.svg#AvenirNextCyrBold') format('svg');
+	font-display: fallback;
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'AvenirNextCyrLight';
+	src: url('../fonts/AvenirNextCyrLight.eot');
+	src: url('../fonts/AvenirNextCyrLight.eot') format('embedded-opentype'),
+		 url('../fonts/AvenirNextCyrLight.woff2') format('woff2'),
+		 url('../fonts/AvenirNextCyrLight.woff') format('woff'),
+		 url('../fonts/AvenirNextCyrLight.ttf') format('truetype'),
+		 url('../fonts/AvenirNextCyrLight.svg#AvenirNextCyrLight') format('svg');
+	font-display: fallback;
+	font-weight: 100;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'AvenirNextCyrMedium';
+	src: url('../fonts/AvenirNextCyrMedium.eot');
+	src: url('../fonts/AvenirNextCyrMedium.eot') format('embedded-opentype'),
+		 url('../fonts/AvenirNextCyrMedium.woff2') format('woff2'),
+		 url('../fonts/AvenirNextCyrMedium.woff') format('woff'),
+		 url('../fonts/AvenirNextCyrMedium.ttf') format('truetype'),
+		 url('../fonts/AvenirNextCyrMedium.svg#AvenirNextCyrMedium') format('svg');
+	font-display: fallback;
+	font-weight: 600;
+	font-style: normal;
+}
+
+@import '../css/_css/bootstrap.min.css'
+@import '../css/_css/jquery.fancybox.min.css'
+
+body
+	font-family: AV
+	font-size: 18px
+	line-height: 1.3
+	color: #fff
+*
+	margin 0
+	padding 0
+	outline none
+
+a
+	color: #fefefe
+	&:focus
+		outline: 0
+	&:hover
+		text-decoration none
+h1,h2,h3,h4,h5,h6
+	font-weight normal
+	margin 0
+button
+	border none
+section
+header
+footer
+	width 100%
+	display block
+.video-wrapper
+	margin 0 auto
+	position relative
+	width 100%
+	&:before
+		content ''
+		height 0
+		padding-top 56.25%
+		display block
+	&:after
+		content: ''
+		display block
+		position: absolute
+		top: 0
+		left 0
+		right 0
+		width: 100%
+		height 70px
+	img,
+	iframe
+		position absolute
+		width 100%
+		height 100%
+		display block
+		background-color #000
+		border-radius 3px
+		border: 0
+		top 0
+		left 0
+		right 0
+		bottom 0
+		cursor pointer
+
+@import 'main/0.header'
+@import 'main/1.main'
+@import 'main/2.for'
+@import 'main/3.also'
+@import 'main/4.plan'
+@import 'main/5.get'
+@import 'main/6.author'
+@import 'main/7.revs'
+@import 'main/8.last'
+@import 'main/9.footer'
+@import 'main/10.medias'
