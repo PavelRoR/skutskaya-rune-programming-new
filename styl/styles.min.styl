@@ -114,6 +114,26 @@ footer
 		right 0
 		bottom 0
 		cursor pointer
+.button
+	display: block
+	margin 0 auto
+	background-color: #140a5c
+	box-shadow: 0px 3px 11.7px 1.3px rgba(0, 0, 0, 0.32);
+	width 100%
+	max-width: 270px;
+	line-height: 69px;
+	text-align: center
+	font-size: 25px;
+	color: rgb(255, 255, 255);
+	text-decoration: none
+	transition: all .3s ease
+	&:focus
+		text-decoration: none
+		color #fff
+	&:hover
+		text-decoration: none 
+		color #fff
+		background-color: #140a5c + 10%
 
 @import 'main/0.header'
 @import 'main/1.main'

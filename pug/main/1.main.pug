@@ -14,15 +14,14 @@ section#main
 		form(action="https://shop.mastervision.su/?r=personal/newsletter/sub/add&id=3568&lg=ru&Contact[id_newsletter]=889" method="post" enctype="application/x-www-form-urlencoded" accept-charset="UTF-8" ).form.form-main
 			.email-block
 				input( type="hidden" value="1" name="required_fields[email]")
-				input(class="email modal_mail" name="Contact[email]" type="text" placeholder="Ваш email")
-			button(type="submit").button.button-main Записаться
+				input(class="input input-mail" name="Contact[email]" type="text" placeholder="Ваш email")
+			button(type="submit").button.button-form Записаться
 			.clearfix
-			p.alert-message
+			p.alert-message Введите почту
 			.checking.checking-modal
 				input(type="checkbox" id="check_1" checked).check
 				label(for="check_1").check-label Я согласен с 
-					a(href="javascript:void(0);")(data-toggle="modal" data-target="#myPolitics")  условиями обработки персональных данных
-					|  по 152 - Ф3
+					a(href="javascript:void(0);")(data-toggle="modal" data-target="#myPolitics")  условиями обработки персональных данных по 152 - Ф3
 			div(style="display: none;")
 				#formTypeSpecificVars(style="display: none;")
 					input(type="hidden" value="889" id="form_newsletter_id_newsletter" name="Contact[id_newsletter]")
