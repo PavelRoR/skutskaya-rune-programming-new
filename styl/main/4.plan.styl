@@ -1,0 +1,29 @@
+#plan
+	@extend #for
+.day
+	width 100%
+	background-repeat no-repeat
+	background-position: center 
+	background-size: cover
+	margin-bottom: 50px
+	&-1
+		padding 30px 530px 30px 30px
+		background-image url(../img/backgrounds/day_1_bg.png)
+	&-2
+		padding 30px 30px 30px 530px
+		background-image url(../img/backgrounds/day_2_bg.png)
+	&-title
+		font-size: 70px;
+		font-family: AVB
+		color: rgba(255, 255, 255, 0.702);
+		margin 0 0 30px 60px
+	&-list
+		padding 30px 60px
+		background-color: rgba(255,255,255,.32)
+		box-shadow: 0 0 13px 5px rgba(255, 255, 255, .22);
+		li
+			color: #fff
+			list-style-position: inside
+			margin-bottom: 30px
+			&:last-child
+				margin-bottom: 0
