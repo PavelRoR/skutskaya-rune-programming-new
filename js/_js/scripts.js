@@ -46,7 +46,10 @@ $(document).ready(function () {
                 email = $('.input-mail', this),
                 button = $('.button-form', this);
             if (!email.val().match(reNone)) {
-                message.text('Введите email').slideDown(500);
+                button.css({
+                    'fontSize': '16px',
+                    'color': 'red'
+                }).text('Введите email');
                 return false;
             }
             if (!check.prop("checked")) {
@@ -58,7 +61,10 @@ $(document).ready(function () {
                     'color': 'red',
                     'transition': 'all .4s ease'
                 });
-                message.text('Подтвердите соглашение').slideDown(500);
+                button.css({
+                    'fontSize': '16px',
+                    'color': 'red'
+                }).text('Подтвердите соглашение');
                 return false;
             }
             if (email.val() && check) {
@@ -76,8 +82,11 @@ $(document).ready(function () {
             }
         });
         email.click(function () {
-            // email.css({"borderColor": "rgb(25, 10, 12)",'transition':'all .4s ease'});
-            message.slideUp(500);
+            button.css({
+                'fontSize': '25px',
+                'color': 'white'
+            }).text('Записаться');
+            // message.slideUp(500);
         });
         check.click(function () {
             check.next().css({
@@ -88,7 +97,10 @@ $(document).ready(function () {
                 "color": "#eee",
                 'transition': 'all .4s ease'
             });
-            message.slideUp(500);
+            button.css({
+                'fontSize': '25px',
+                'color': 'white'
+            }).text('Записаться');
         });
     });
     $(function () {
