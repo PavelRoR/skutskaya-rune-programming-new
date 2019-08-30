@@ -1,0 +1,34 @@
+section#last
+	.container
+		+gt('','ДОСТИГАЙТЕ БОЛЬШЕГО ЕЖЕДНЕВНО!')
+		h4.last-subtitle Более 8 000 учеников доверяют нам и реализуют свои цели
+			br
+			| Начните сейчас это бесплатно!
+		.last-container
+			p.last-text Каждому, пришедшему на 
+				span.for-text-bold БЕСПЛАТНЫЙ 
+				| онлайн-мастер-класс, дарим денежные подарки! 
+				br
+				| И проводим грандиозный розыгрыш с ценным призом!
+			p.last-text Зарегистрируйтесь сейчас и получите бонус на email 
+				span.for-text-italic “Диагностика ситуации выбора”
+			h3.switch-title.hide
+			p.switch-text.hide
+			form(action="https://shop.mastervision.su/?r=personal/newsletter/sub/add&id=3568&lg=ru&Contact[id_newsletter]=889" method="post" enctype="application/x-www-form-urlencoded" accept-charset="UTF-8" ).form.form-last
+				.email-block
+					input( type="hidden" value="1" name="required_fields[email]")
+					input(class="input input-mail" name="Contact[email]" type="text" placeholder="Ваш email")
+				button(type="submit").button.button-form Записаться
+				.clearfix
+				p.alert-message Введите почту
+				.checking.checking-modal
+					input(type="checkbox" id="check-2" checked).check
+					label(for="check-2").check-label Я согласен с 
+						a(href="javascript:void(0);")(data-toggle="modal" data-target="#myPolitics")  условиями обработки персональных данных по 152 - Ф3
+				div(style="display: none;")
+					#formTypeSpecificVars(style="display: none;")
+						input(type="hidden" value="889" id="form_newsletter_id_newsletter" name="Contact[id_newsletter]")
+					<!-- API код канала рекламы -->
+					input(type="hidden" value="0" id="form_newsletter_id_advertising_channel_page" name="Contact[id_advertising_channel_page]")
+					input(type="hidden" name="formId" value="140")
+					input(type="hidden" name="formVc" value="3156278419")

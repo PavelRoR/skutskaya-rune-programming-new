@@ -16,9 +16,9 @@ $(document).ready(function () {
     });
     $(function () {
         var check = $('.check', this),
-            email = $('.email', this),
-            message = $('.alert_message', this),
-            button = $('.button_mail', this),
+            email = $('.input-mail', this),
+            message = $('.alert-message', this),
+            button = $('.button-form', this),
             title = $('.mail_section_title'),
             title_2 = $('.last_form_title'),
             currDate = new Date(),
@@ -41,10 +41,10 @@ $(document).ready(function () {
         }
         $(".form").on("submit", function () {
             var check = $('.check', this),
-                message = $('.alert_message', this),
+                message = $('.alert-message', this),
                 reNone = /.+/,
-                email = $('.email', this),
-                button = $('.button_mail', this);
+                email = $('.input-mail', this),
+                button = $('.button-form', this);
             if (!email.val().match(reNone)) {
                 message.text('Введите email').slideDown(500);
                 return false;
