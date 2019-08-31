@@ -1,0 +1,28 @@
+-var head_url = 'https://skutskaya.mastervision.su/rune-programming-2/thanks/';
+-var head_title = 'Спасибо за регистрацию на онлайн-мастер-класс';
+-var styles = '../css/thanks.min.css';
+-var fav_ico = '../favicon.ico'
+-var fav_png = '../favicon.png'
+
+mixin gt(cl,h3)
+	h3.general-title(class= cl)= h3
+	
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include pug/head
+		include pug/scripts/head_fb_scripts
+	body
+		include pug/scripts/body_top_fb_scripts
+		section#main
+			.container
+				include pug/header
+				h2.main-subtitle-2.main-subtitle-2-thanks Обязательно приходите на онлайн-мастер-класс 
+					span.switch-date
+				br
+				a(href="../content/notebooks.zip" download).button.button-download Скачать тетради 
+					i.fa.fa-file-text(aria-hidden="true")
+		include pug/bonus/3.footer.pug
+		link(rel="stylesheet", href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+		script(src="../js/thanks.min.js")
+		include pug/scripts/body_bottom_scripts

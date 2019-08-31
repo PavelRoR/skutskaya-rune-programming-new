@@ -1,0 +1,48 @@
+-var head_url = 'https://skutskaya.mastervision.su/rune-programming-2/promo/';
+-var head_title = 'Спасибо за регистрацию на онлайн-мастер-класс';
+-var styles = '../css/thanks.min.css';
+-var fav_ico = '../favicon.ico'
+-var fav_png = '../favicon.png'
+
+mixin gt(cl,h3)
+	h3.general-title(class= cl)= h3
+	
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include pug/head
+		include pug/scripts/head_fb_scripts
+	body
+		include pug/scripts/body_top_fb_scripts
+		section#main
+			.container
+				include pug/header
+				h1.main-title.hide Спасибо за регистрацию на онлайн-мастер-класс, будем рады вас видеть на онлайн-мастер-классе 
+					span.switch-date
+				br
+				h2.main-subtitle.hide У меня для вас замечательная новость
+				h3.main-subtitle-2.hide Обязательно приходите  на онлайн-мастер-класс и возможно именно вы выиграете ценный приз
+				h3.main-subtitle-2 Оставьте свои данные, чтоб скачать рабочие тетради для каждого из дней мастер-класса. Они помогут вам максимально эффективно работать на уроках
+				form(action="https://shop.mastervision.su/?r=personal/newsletter/data/add&id=3568&lg=ru" method="post" enctype="application/x-www-form-urlencoded" accept-charset="UTF-8" ).form.form-promo
+					.email-block
+						input( type="hidden" value="1" name="required_fields[phone_number]")
+						input(class="input input-mail" name="Contact[phone_number]" type="text" placeholder="Ваш телефон")
+					button(type="submit").button.button-form Получить
+					.clearfix
+					p.alert-message
+					.checking
+						input(type="checkbox" id="check" checked).check
+						label(for="check").check-label Я согласен с 
+							a(href="javascript:void(0);")(data-toggle="modal" data-target="#myPolitics")  условиями обработки персональных данных
+							|  по 152 - Ф3
+					div(style="display: none;")
+						div#formTypeSpecificVars(style="display: none;")
+						<!-- API код канала рекламы --> 
+						input(type="hidden" value="0" name="Contact[id_advertising_channel_page]")#form_newsletter_id_advertising_channel_page
+						input(type="hidden" name="formId" value="107")
+						input(type="hidden" name="formVc" value="3735146744")
+		include pug/bonus/3.footer.pug
+		include pug/main/12.politics.pug
+		link(rel="stylesheet", href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+		script(src="../js/thanks.min.js")
+		include pug/scripts/body_bottom_scripts
