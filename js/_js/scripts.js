@@ -10,7 +10,7 @@ $(document).ready(function () {
             var head = document.getElementsByTagName("head")[0];
             var link = document.createElement("link");
             link.rel = "stylesheet";
-            link.href = "css/ie.css";
+            link.href = "css/ie.min.css";
             head.appendChild(link);
         }
     });
