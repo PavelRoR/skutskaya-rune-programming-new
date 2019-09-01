@@ -1,7 +1,34 @@
 //@prepros-prepend jquery-2.1.1.min.js
 //@prepros-prepend bootstrap.min.js
+//@prepros-prepend intlTelInput.min.js
+//@prepros-prepend utils.js
 
 $(document).ready(function () {
+    $('.input-mail').intlTelInput({
+        defaultCountry: "ru",
+        initialCountry: "auto",
+        preferredCountries: ["ru", "ua", 'az', 'am', 'by', 'kz', 'kg', 'md', 'tj', 'uz', 'tm', 'ge'],
+        autoPlaceholder: 'aggressive',
+        nationalMode: false,
+        customPlaceholder: function (selectedCountryPlaceholder, selectedCountryData) {
+            return "+" + selectedCountryData.dialCode;
+        },
+        geoIpLookup: function (success, failure) {
+            /*
+            $.get( "https://ip-api.com/json/", function( data ) {
+                var countryCode = (data.countryCode) ? data.countryCode : "ru";
+                success(countryCode);
+            }, "json" );*/
+
+            $.get("https://ipinfo.io", function () {}, "jsonp").always(function (resp) {
+                var countryCode = (resp && resp.country) ? resp.country : "ru";
+                success(countryCode);
+            });
+        },
+        separateDialCode: false,
+        formatOnDisplay: false,
+        utilsScript: 'https://mk.beauty-matrix.ru/assets/plugins/intltelinput/js/utils.js',
+    });
     $(function () {
         var e = new Date,
             t = e.getDate(),
@@ -13,26 +40,82 @@ $(document).ready(function () {
             default:
                 n.text("19 сентября")
         }
-    }), $(function () {
-        var e = $(".check", this),
-            t = $(".input-mail", this),
-            n = $(".alert-message", this);
-        t.keypress(function (e) {
-            if ((e.keyCode < 48 || e.keyCode > 57) && 43 != e.keyCode) return n.text("Только цифры!").slideDown(500), !1;
-            n.slideUp(500)
-        }), $(".form").on("submit", function () {
-            var e = $(".check", this),
-                t = $(".alert-message", this),
-                n = $(".input-mail", this),
-                i = $(".button-form", this);
-            return n.val().match(/.+/) ? n.val().match(/^([0-9])+$/) ? e.prop("checked") ? void(n.val() && e && (i.text("Отправляем..."), setTimeout(function () {
-                i.text("Отправлено!")
-            }, 500))) : (e.next().css("color", "#000"), e.next().children().css("color", "#000"), t.text("Подтвердите соглашение").slideDown(500), !1) : (n.css("border", "1px solid red").val(""), t.text("Только цифры!").slideDown(500), !1) : (n.css("border", "1px solid red"),
-                t.text("Введите телефон").slideDown(500), !1)
-        }), t.click(function () {
-            t.css("border", "none"), n.slideUp(500)
-        }), e.click(function () {
-            e.next().css("color", "rgba(255,255,255,0.9)"), e.next().children().css("color", "rgba(255,255,255,0.9)"), n.slideUp(500)
-        })
-    })
+    });
+    $(function () {
+        var check = $('.check', this),
+            email = $('.input-mail', this),
+            button = $('.button-form', this);
+        email.keypress(function (e) {
+            if ((e.keyCode < 48 || e.keyCode > 57) && 43 != e.keyCode) {
+                this.value += '';
+                button.css({
+                    'fontSize': '16px',
+                    'color': 'red'
+                }).text("Только цифры!");
+                return false
+            } else {
+                button.css({
+                    'fontSize': '25px',
+                    'color': 'white'
+                }).text('Получить');
+            }
+        });
+        $(".form").on("submit", function () {
+            var check = $('.check', this),
+                reNone = /.+/,
+                email = $('.input-mail', this),
+                button = $('.button-form', this);
+
+            if (!email.val().match(reNone)) {
+                button.css({
+                    'fontSize': '16px',
+                    'color': 'red'
+                }).text('Введите телефон');
+                return false;
+            }
+            if (!check.prop("checked")) {
+                check.next().css({
+                    'color': 'red',
+                    'transition': 'all .4s ease'
+                });
+                check.next().children().css({
+                    'color': 'red',
+                    'transition': 'all .4s ease'
+                });
+                button.css({
+                    'fontSize': '16px',
+                    'color': 'red'
+                }).text('Подтвердите соглашение');
+                return false;
+            }
+            if (email.val() && check) {
+                button.text('Отправляем...');
+                setTimeout(function () {
+                    button.text('Отправлено!');
+                }, 500);
+                return true
+            }
+        });
+        email.click(function () {
+            button.css({
+                'fontSize': '25px',
+                'color': 'white'
+            }).text('Получить');
+            // message.slideUp(500);
+        });
+        check.click(function () {
+            check.next().css({
+                "color": "#eee",
+                'transition': 'all .4s ease'
+            });
+            check.next().children().css({
+                "color": "#eee",
+                'transition': 'all .4s ease'
+            });
+            button.css({
+                'fontSize': '25px',
+                'color': 'white'
+            }).text('Получить');
+        });
+    });
 });

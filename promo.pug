@@ -11,9 +11,9 @@ mixin gt(cl,h3)
 html(lang="ru")
 	head
 		include pug/head
-		include pug/scripts/head_fb_scripts
+		include pug/scripts/head_scripts
 	body
-		include pug/scripts/body_top_fb_scripts
+		include pug/scripts/body_top_scripts
 		section#main
 			.container
 				include pug/header
@@ -24,9 +24,10 @@ html(lang="ru")
 				h3.main-subtitle-2.hide Обязательно приходите  на онлайн-мастер-класс и возможно именно вы выиграете ценный приз
 				h3.main-subtitle-2 Оставьте свои данные, чтоб скачать рабочие тетради для каждого из дней мастер-класса. Они помогут вам максимально эффективно работать на уроках
 				form(action="https://shop.mastervision.su/?r=personal/newsletter/data/add&id=3568&lg=ru" method="post" enctype="application/x-www-form-urlencoded" accept-charset="UTF-8" ).form.form-promo
-					.email-block
-						input( type="hidden" value="1" name="required_fields[phone_number]")
-						input(class="input input-mail" name="Contact[phone_number]" type="text" placeholder="Ваш телефон")
+					.inputrow
+						.inputblock
+							input(type="hidden" value="1" name="required_fields[phone_number]")
+							input(class="input input-mail" name="Contact[phone_number]" type="text" placeholder="Ваш телефон")
 					button(type="submit").button.button-form Получить
 					.clearfix
 					p.alert-message
