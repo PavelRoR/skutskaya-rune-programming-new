@@ -4,26 +4,28 @@
 	.container
 		width 1400px
 	#main
+		padding-bottom: 100px
+	.video-wrapper-main
+		max-width 860px
 	#feedback
-		padding 60px 0
+		padding 80px 0
 	footer p
 		font-size: 16px
-	#main.remind
-		min-height calc(100vh - 247px)
-	.remind_main_title
-		margin 40px 0 60px
 @media screen and (max-width 1199px)
-	#logo
-		width 200px
-	.contacts
-		line-height: 28px
-	#main.remind
-		min-height calc(100vh - 234px)
+	.contact
+		margin-left: 12px
+		&&-email
+			padding-left:  32px
+		&&-skype
+		&&-tel
+			padding-left: 27px
 @media screen and (max-width 991px)
 	#logo
+		width 190px
+		height 15px
 		display block
 		float: none
-		margin 0 auto
+		margin 0 auto 10px
 	.contacts
 		float: none
 		line-height: 16px
@@ -34,43 +36,61 @@
 		span
 			padding-left: 5px
 	#main
+		padding-bottom: 40px
+	.pre
+		margin-top: 20px
 	#feedback
 		padding 40px 0
-	footer p br
-		display: none
+	.remind-main-title
+		margin-top: 30px
 @media screen and (max-width 767px)
 	#vk
 		margin-bottom: 25px
 @media screen and (max-width 485px)
+	header
+		margin-bottom: 0
 	#logo
-		width 180px
-	.contacts
-		line-height: 14px
+		width 160px
+		height 14px
+		margin-bottom: 5px
 	.contact
+		line-height: 14px
 		font-size: 12px
+		&&-email
+			padding-left: 20px
+		&&-skype
+		&&-tel
+			padding-left: 17px
 	#main
+		padding-bottom: 30px
 	#feedback
 		padding 30px 0
-	.main_title
+	.pre
+		margin-top: 0
+		font-size: 18px
+	.main-title
 		font-size: 26px
-		margin 10px 0 20px
-	.general_title
+		margin 10px 0 15px
+	.main-info
+		font-size: 22px
+	.general-title
 		font-size: 20px
 		margin-bottom: 20px
 	footer h5
 		font-size: 18px
-	.soc_buttons a
+	.soc-buttons a
 		margin 5px
 	footer p
 		font-size: 12px
-	.remind_main_subtitle
+	.remind-main-subtitle
 		font-size: 20px
 @media screen and (max-width 380px)
 	.pre
 		font-size: 16px
-	.main_title
+	.main-title
 		font-size: 20px
 		margin 10px 0
-	.general_title
-	.remind_main_subtitle
+	.general-title
+	.remind-main-subtitle
+	.main-info
 		font-size: 18px
