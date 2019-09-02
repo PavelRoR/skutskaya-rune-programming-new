@@ -6,16 +6,16 @@ mixin reason(cl,p)
 section#for
 	.container
 		.row
-			.col-md-6.col-sm-6
+			.col-md-6.col-md-push-6
+				.video-wrapper.video-wrapper-for
+					iframe(src="https://youtube.com/embed/HF1BD3vL6R4?autoplay=1&mute=1" allowfullscreen)
+			.col-md-6.col-md-pull-6
 				p.for-text Если Вы слышали о рунах, но не знаете с чего начать, если Вы изучали руны, но до сих пор нет стабильного результата - этот мастер-класс для Вас. Анна Скуцкая познакомит Вас с удивительным миром рун и раскроет секреты, которые помогут Вам в решении любых жизненных проблем.
 				p.for-text Регистрируйтесь на мастер-класс 
 					span.for-text-italic “Программирование событий на языке рун” 
 					| прямо сейчас! Для участников 
 					span.for-text-bold бесплатного 
 					| мастер-класса мы приготовили  подарки и бонусы
-			.col-md-6.col-sm-6
-				.video-wrapper.video-wrapper-for
-					iframe(src="https://youtube.com/embed/HF1BD3vL6R4?autoplay=1&mute=1" allowfullscreen)
 		+gt('general-title-for', 'ЭТОТ ОНЛАЙН-МАСТЕР-КЛАСС НЕОБХОДИМ ДЛЯ ТЕХ, КТО:')
 		.row
 			+reason('reason-1','Хочет научиться работать с рунами, чтобы решать свои жизненно важные вопросы и задачи')
