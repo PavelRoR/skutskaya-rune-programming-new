@@ -44,11 +44,11 @@ $(document).ready(function () {
             t = e.getDate(),
             n = $(".switch-date");
         switch (t) {
-            case 20:
-                n.text("20 сентября");
+            case 10:
+                n.text("10 сентября");
                 break;
             default:
-                n.text("19 сентября")
+                n.text("9 сентября")
         }
     });
     $(function () {

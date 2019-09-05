@@ -1,0 +1,44 @@
+section#revs
+	.container
+		+gt('','Отзывы учеников:')
+		#text-revs.carousel.slide(data-ride="carousel" data-interval="false")
+			.carousel-inner(role="listbox")
+				.item.text-rev-item.active
+					a( href="../img/revs/rev_1.jpg" data-fancybox="revs")
+						img.revs-img( src="../img/revs/rev_1.jpg" alt="Отзыв 1")
+				.item.text-rev-item
+					a( href="../img/revs/rev_2.jpg" data-fancybox="revs")
+						img.revs-img( src="../img/revs/rev_2.jpg" alt="Отзыв 2")
+				.item.text-rev-item
+					a( href="../img/revs/rev_3.jpg" data-fancybox="revs")
+						img.revs-img( src="../img/revs/rev_3.jpg" alt="Отзыв 3")
+				.item.text-rev-item
+					a( href="../img/revs/rev_4.jpg" data-fancybox="revs")
+						img.revs-img( src="../img/revs/rev_4.jpg" alt="Отзыв 4")
+			//- ol.carousel-indicators.revs_indicators
+			//- 	li.active( data-target="#text-revs" data-slide-to="0")
+			//- 	li( data-target="#text-revs" data-slide-to="1")
+			//- 	li( data-target="#text-revs" data-slide-to="2")
+			//- 	li( data-target="#text-revs" data-slide-to="3")
+			//- 	li( data-target="#text-revs" data-slide-to="4")
+			//- 	li( data-target="#text-revs" data-slide-to="5")
+			.controls.text_controls
+				a( class="left carousel-control" href="#text-revs" role="button" data-slide="prev") <
+				a( class="right carousel-control" href="#text-revs" role="button" data-slide="next") >
+			.clearfix
+		#video-revs.carousel.slide(data-ride="carousel" data-interval="false")
+			.carousel-inner(role="listbox")
+				.item.active
+					.video-wrapper.video-wrapper-revs(data-youtube="an6Ji2-2Mz8" data-img="../img/revs/video_1.jpg")
+						img.video-rev-img(src="../img/revs/video_1.jpg", alt="Видео отзыв")
+				.item
+					.video-wrapper.video-wrapper-revs(data-youtube="J3QN0oOXlck" data-img="../img/revs/video_2.jpg")
+						img.video-rev-img(src="../img/revs/video_2.jpg", alt="Видео отзыв")
+			//- ol.carousel-indicators.revs_indicators
+			//- 	li.active( data-target="#text-revs" data-slide-to="0")
+			//- 	li( data-target="#video-revs" data-slide-to="1")
+			//- 	li( data-target="#video-revs" data-slide-to="2")
+			//- 	li( data-target="#video-revs" data-slide-to="3")
+			.controls.text_controls
+				a( class="left carousel-control" href="#video-revs" role="button" data-slide="prev") <
+				a( class="right carousel-control" href="#video-revs" role="button" data-slide="next") >

@@ -1,0 +1,34 @@
+-var head_url = 'https://skutskaya.mastervision.su/rune-programming-2/course/';
+-var head_title = '«Программирование событий на языке рун»';
+-var head_description = 'Обучающий курс Анны Скуцкой';
+-var styles = '../css/course.min.css';
+-var oferta = '../oferta/oferta_course.doc'
+-var fav_ico = '../favicon.ico'
+-var fav_png = '../favicon.png'
+
+mixin gt(cl,h3)
+	h3.general-title(class= cl)= h3
+mixin bl(cl,href,t)
+	a.button(class= cl href= href target="_blank")= t
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include pug/head
+		include pug/scripts/head_scripts
+	body
+		include pug/scripts/body_top_scripts
+		include pug/course/1.main.pug
+		include pug/course/3.get.pug
+		include pug/course/2.plan.pug
+		include pug/course/4.prices.pug
+		include pug/main/6.author.pug
+		include pug/course/5.revs.pug
+		include pug/spof/5.footer.pug
+		include pug/course/6.scripts.pug
+		<!-- Begin LeadBack code -->
+		//script
+			| var _emv = _emv || [];_emv['campaign'] = '867c51ec0949a1cc34f60545'; (function() { var em = document.createElement('script');em.type = 'text/javascript';em.async = true;em.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'leadback.ru/js/leadback.js';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(em, s);})();
+		<!-- End LeadBack code -->
+		<!-- AutoWebOffice: UTM or OpenStat Counter -->
+		include pug/scripts/body_bottom_scripts

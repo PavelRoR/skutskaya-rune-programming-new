@@ -12,6 +12,12 @@ html(lang="ru")
 	head
 		include pug/head
 		include pug/scripts/head_fb_scripts
+		<!-- Facebook Pixel Code -->
+		script
+			| ! function (f, b, e, v, n, t, s) {if (f.fbq) return;n = f.fbq = function () {n.callMethod ?n.callMethod.apply(n, arguments) : n.queue.push(arguments)};if (!f._fbq) f._fbq = n;n.push = n;n.loaded = !0;n.version = '2.0';n.queue = [];t = b.createElement(e);t.async = !0;t.src = v;s = b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t, s)}(window, document, 'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init', '1227078837469283');fbq('track', 'PageView');
+		noscript
+			img(height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1227078837469283&ev=PageView&noscript=1")
+		<!-- End Facebook Pixel Code -->
 	body
 		include pug/scripts/body_top_fb_scripts
 		section#main
@@ -20,7 +26,7 @@ html(lang="ru")
 				h2.main-subtitle-2.main-subtitle-2-thanks Обязательно приходите на онлайн-мастер-класс 
 					span.switch-date
 				br
-				a(href="../content/notebooks.zip" download).button.button-download Скачать тетради 
+				a(href="https://drive.google.com/file/d/1VWc9gMwNtiDE2b4DyYqzrFjJZULaZlSe/view?usp=sharing" target="_blank").button.button-download Скачать тетрадь 
 					i.fa.fa-file-text(aria-hidden="true")
 				p.thanks-text Регистрируйтесь в удобный для вас мессенджер, чтобы оставаться на связи и не пропустить мастер-класс
 				p.thanks-text 

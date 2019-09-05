@@ -1,0 +1,65 @@
+#get
+	padding 50px 0
+	background-color: #212025;
+	background-image: url("../img/backgrounds/also_bg.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	position relative
+	&:before
+		@extend #main:before
+		background-color: rgba(#212025, .5);
+	.container
+		@extend #main .container
+.general-title-get
+	small
+		display block
+		text-transform: none
+.get-packet
+	background-color: rgba(255, 255, 255, .9);
+	width: 900px;
+	padding 20px
+	position relative
+	margin-bottom: 40px
+	float left
+	box-shadow: 0 0 13px 5px rgba(255, 255, 255, .62);
+.get-packet-gold
+	float: right
+.get-packet-platinum
+	margin-bottom: 0
+.get-packet-title
+	font-size: 55px;
+	line-height: 60px
+	font-family: AVB
+	color: rgba(45, 34, 51, 0.2);
+	text-transform: uppercase;
+	position: absolute
+	top 16px
+	right 20px
+.get-packet-list
+	li
+		color: rgb(0, 0, 0);
+		line-height: 1.5;
+		margin-bottom: 10px
+		position relative
+		padding-left: 16px
+		list-style: none
+		width 100%
+		&:before
+			content ''
+			display block
+			position: absolute;
+			width: 8px;
+			height: 8px;
+			border-radius: 50px
+			background-color: #00222B
+			top 11px
+			left 0
+		&:last-child
+			margin-bottom: 0
+.get-packet-text
+	font-family: AVM
+	color: rgb(45, 34, 51);
+	line-height: 1.5;
+	font-size: 20px
+	margin-top: 15px
